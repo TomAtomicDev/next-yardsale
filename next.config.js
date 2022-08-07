@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  /* swcMinify: true,
   env: {
     customKey: 'customValue',
     },
   basePath: '/dist',
-  compress: true,
+  compress: true, */
 /*   async redirects() {
     return [
       {

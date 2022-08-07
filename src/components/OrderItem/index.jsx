@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import {AppContext} from '@context/AppContext'
-import './OrderItem.scss' //OrderItem for the teacher
+import {AppContext} from 'context/AppContext'
 import iconClose from '@icons/icon_close.png';
+import styles from './OrderItem.module.scss' //OrderItem for the teacher
 
 function OrderItem ({product, keyIndex}) {
 
@@ -12,7 +12,7 @@ function OrderItem ({product, keyIndex}) {
   }
 
   return (
-    <div className="orderItem">
+    <div className={styles.orderItem}>
       <figure className="orderItem__img">
         <img src={product.images[0]} className="orderItem__img" alt={product.title} />
       </figure>

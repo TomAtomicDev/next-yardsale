@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-import {OrderSummary} from '../../components/OrderSummary';
-import {OrderItem} from '../../components/OrderItem';
-import { AppContext } from '@context/AppContext';
-import './MyOrder.scss';
+import {OrderItem} from 'components/OrderItem';
+import { AppContext } from 'context/AppContext';
+import styles from './MyOrder.module.scss';
 
 import iconArrow from '@icons/flechita.svg';
 
@@ -17,7 +16,7 @@ function MyOrder (props) {
   };
 
   return (
-    <aside className="my-order">
+    <aside className={styles.My-order}>
       <div className="my-order-container">
         <div className="my-order__titleContainer">
           <img src={iconArrow} alt="arrow" className="arrow"/>

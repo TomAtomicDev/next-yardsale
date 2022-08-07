@@ -1,49 +1,49 @@
 import React from 'react';
-import './MenuMobile.scss';
+import styles from './MenuMobile.module.scss';
 
 function MenuMobile(props) {
   return (
-    <div className="mobile-menu">
+    <div className={styles['mobile-menu']}>
       <a href="/">
-        <i className="icon-close" />
+        <i className={styles["icon-close"]} />
       </a>
-      <ul className="mobile-menu__list mobile-menu__categories">
-        <li className="mobile-menu__item">
-          <p className="mobile-menu__title">CATEGORIES</p>
+      <ul className={`${styles["mobile-menu__list"]} ${styles["mobile-menu__categories"]}`}>
+        <li className={styles["mobile-menu__item"]}>
+          <p className={styles["mobile-menu__title"]}>CATEGORIES</p>
         </li>
-        <li className="mobile-menu__item">
-          <a className="mobile-menu__link" href="/">All</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a className={styles["mobile-menu__link"]} href="/">All</a>
         </li>
-        <li className="mobile-menu__item">
-          <a className="mobile-menu__link" href="/">Clothes</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a className={styles["mobile-menu__link"]} href="/">Clothes</a>
         </li>
-        <li className="mobile-menu__item">
-          <a className="mobile-menu__link" href="/">Electronics</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a className={styles["mobile-menu__link"]} href="/">Electronics</a>
         </li>
-        <li className="mobile-menu__item">
-          <a className="mobile-menu__link" href="/">Furnitures</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a className={styles["mobile-menu__link"]} href="/">Furnitures</a>
         </li>
-        <li className="mobile-menu__item">
-          <a className="mobile-menu__link" href="/">Toys</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a className={styles["mobile-menu__link"]} href="/">Toys</a>
         </li>
-        <li className="mobile-menu__item">
-          <a className="mobile-menu__link" href="/">Others</a>
-        </li>
-      </ul>
-      <ul className="mobile-menu__list">
-        <li className="mobile-menu__item">
-          <a href className="mobile-menu__link">My orders</a>
-        </li>
-        <li className="mobile-menu__item">
-          <a href className="mobile-menu__link">My account</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a className={styles["mobile-menu__link"]} href="/">Others</a>
         </li>
       </ul>
-      <ul className="mobile-menu__list info">
-        <li className="info__item">
-          <a className="tinny-note" href="/">myadress@example.com</a>
+      <ul className={styles["mobile-menu__list"]}>
+        <li className={styles["mobile-menu__item"]}>
+          <a href className={styles["mobile-menu__link"]}>My orders</a>
         </li>
-        <li className="info__item">
-          <a className="tinny-note tinny-note__link" href="/">Sign out</a>
+        <li className={styles["mobile-menu__item"]}>
+          <a href className={styles["mobile-menu__link"]}>My account</a>
+        </li>
+      </ul>
+      <ul className={`${styles["mobile-menu__list"]} ${styles["info"]}`}>
+        <li className={styles["info__item"]}>
+          <a className={styles["tinny-note"]} href="/">myadress@example.com</a>
+        </li>
+        <li className={styles["info__item"]}>
+          <a className={`${styles["tinny-note"]} ${styles["tinny-note__link"]}`} href="/">Sign out</a>
         </li>
       </ul>
     </div>
