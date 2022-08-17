@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import {OrderItem} from 'components/OrderItem';
 import { AppContext } from 'context/AppContext';
 import styles from './MyOrder.module.scss';
@@ -16,32 +18,34 @@ function MyOrder (props) {
   };
 
   return (
-    <aside className={styles.My-order}>
-      <div className="my-order-container">
-        <div className="my-order__titleContainer">
-          <img src={iconArrow} alt="arrow" className="arrow"/>
-          <h1 className="title order-title">My order</h1>
+    <aside className={styles["my-order"]}>
+      <div className={styles["my-order-container"]}>
+        <div className={styles["my-order__titleContainer"]}>
+          <Image src={iconArrow} alt="arrow" className={styles["arrow"]}/>
+          <h1 className="{styles[order-title]}">My order</h1>
         </div>
 
-        <div className="order-products">
+        <div className={styles["order-products"]}>
           {cart.map( (product, index) => (
             <OrderItem product={product} key={`order-item-${index}`}  keyIndex={index} />
           ))}
           
         </div>
 
-        <div className="order-summary">
-          <p className="order-summary__info">
-            <span className="order-summary__date">Total</span>
-            <span className="order-summary__count">{cart.length} articles</span>
+        <div className={styles["order-summary"]}>
+          <p className={styles["order-summary__info"]}>
+            <span className={styles["order-summary__date"]}>Total</span>
+            <span className={styles["order-summary__count"]}>{cart.length} articles</span>
           </p>
-          <p className="order-summary__totalmoney">${totalPrice()}</p>
+          <p className={styles["order-summary__totalmoney"]}>${totalPrice()}</p>
           
         </div>
-        
-        <button className="button button--primary">
+        <Link href="/checkout">
+        <button className={`${styles["button"]} ${styles["button--primary"]}`}>
           Checkout
         </button>
+        </Link>
+        
         
       </div>
     </aside>
