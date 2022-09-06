@@ -1,9 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import './OrderSummary.scss'; // just Order for the teacher... OrderItem
 
 import iconArrow from '@icons/flechita.svg';
 
-function OrderSummary (props) {
+function OrderSummary() {
   return (
     <div className="order-summary">
       <p className="order-summary__info">
@@ -11,10 +12,9 @@ function OrderSummary (props) {
         <span className="order-summary__count">6 articles</span>
       </p>
       <p className="order-summary__totalmoney">$560.00</p>
-      {/* <img src={iconArrow} alt="arrow" />                 */}
+      <Image src={iconArrow} alt="arrow" />                
     </div>
-
   );
 }
 
-export {OrderSummary} ; 
+export { OrderSummary };

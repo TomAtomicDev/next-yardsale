@@ -1,15 +1,16 @@
-.mobile-menu  {
+.mobile-menu {
   position: absolute;
   top: 60px;
   right: 50px;
   display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   width: auto;
   max-width: 400px;
   padding: 24px;
   background-color: var(--white);
-
+  border: 1px solid var(--very-light-pink);
+  z-index: 1;
 }
 .mobile-menu__title {
   color: var(--hospital-green);
@@ -44,8 +45,8 @@
 .icon-close {
   display: inline-block;
   position: absolute;
-      top: 10px;
-      right: 10px;
+  top: 10px;
+  right: 10px;
   width: 20px;
   height: 20px;
   background-image: url('../../assets/icons/icon_close.png');

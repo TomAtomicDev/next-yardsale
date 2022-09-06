@@ -1,14 +1,15 @@
 import React from 'react';
-import {ShoppingCartItem} from '../../components/ShoppingCartItem';
-import {OrderSummary} from '../../components/OrderSummary';
+import Image from 'next/image';
+import { ShoppingCartItem } from '../../components/ShoppingCartItem';
+import { OrderSummary } from '../../components/OrderSummary';
 import './ShoppingCart.scss';
 import iconArrow from '@icons/flechita.svg';
 
-function ShoppingCart (props) {
+function ShoppingCart() {
   return (
     <aside className="shopping-cart">
       <div className="icon-container">
-        <img className="icon-container--close" src={iconArrow} alt="close" />
+        <Image className="icon-container--close" src={iconArrow} alt="close" />
       </div>
       <p className="shoppingCart-title">Shopping cart</p>
       <div className="shoppingCart__products">
@@ -17,11 +18,9 @@ function ShoppingCart (props) {
         <ShoppingCartItem />
       </div>
       <OrderSummary />
-      <button class="button button--primary">
-        Check out
-      </button> 
+      <button className="button button--primary">Check out</button>
     </aside>
   );
 }
 
-export {ShoppingCart} ;
+export { ShoppingCart };

@@ -1,10 +1,8 @@
 import React from 'react';
 import { ProductList } from '../containers/ProductList';
 
-function Home(props) {
-  return (
-    <ProductList />
-  );
+function Home() {
+  return <ProductList />;
 }
 
-export { Home } ;
+export { Home };

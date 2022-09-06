@@ -1,6 +1,6 @@
 .product-detail {
   position: absolute;
-    right: 0;
+  right: 0;
   width: 360px;
 }
 .product-detail__icon-container {
@@ -9,21 +9,21 @@
 }
 .product-detail__icon-close {
   position: absolute;
-      top: 4px;
-      left: 4px;
-      z-index: 2;
+  top: 4px;
+  left: 4px;
+  z-index: 2;
   width: 26px;
   height: 26px;
   padding: 7px;
   border-radius: 50%;
-  
+
   background-color: var(--white);
   cursor: pointer;
   z-index: 2;
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .product-detail {
-      width: 100%;
+    width: 100%;
   }
 }

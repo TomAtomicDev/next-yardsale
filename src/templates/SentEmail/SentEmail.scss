@@ -6,20 +6,19 @@
 }
 .SentEmail-container {
   display: grid;
-      grid-template-rows: auto 1fr auto;
-  width: 300px;     
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
 }
 
 .email-icon {
   display: flex;
-      place-content: center center;
+  place-content: center center;
   justify-self: center;
   width: 132px;
   height: 132px;
   margin-bottom: 24px;
   border-radius: 50%;
   background-color: var(--text-input-field);
-  
 }
 .email-icon img {
   width: 80px;
